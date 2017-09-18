@@ -9,3 +9,6 @@ RUN go get -v -u sourcegraph.com/sourcegraph/prototools/cmd/protoc-gen-doc && \
 	rm -rf /go/src/github.com/sourcegraph/prototools/templates/.svn && \
 	apt-get remove -y subversion && \
 	apt-get autoremove -y
+
+#install tool to inject custom tags to struct
+RUN go get -v -u github.com/favadi/protoc-go-inject-tag
